@@ -9,7 +9,8 @@ public class martixCalc {
   }
 
   public void printMatrix_containder() {
-    System.out.print(
+    if(dimensionInput == 3){
+      System.out.print(
       martixGenarate[0][0] +
       " " +
       martixGenarate[0][1] +
@@ -33,6 +34,10 @@ public class martixCalc {
       martixGenarate[2][2] +
       "\n"
     );
+    }else{
+      System.out.print(martixGenarate[0][0]+" "+martixGenarate[0][1]+"\n");
+      System.out.println(martixGenarate[1][0]+" "+martixGenarate[0][1]);
+    }
   }
 
   void CreateAndFillMartix() {
@@ -51,5 +56,12 @@ public class martixCalc {
 
   public void PopulateMartixWithInt(int x, int y, int value) {
     martixGenarate[x][y] = value;
+  }
+  void Calc2DMatrixDet(){
+    if(dimensionInput == 2){int topHalf = martixGenarate[0][0]*martixGenarate[1][1];
+      int underHalf = martixGenarate[1][0]*martixGenarate[0][1];
+      int det = topHalf-underHalf;
+      System.out.println(det);}
+      return;
   }
 }

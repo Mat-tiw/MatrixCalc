@@ -4,7 +4,8 @@ public class Mains {
 
   public static void main(String[] args) {
     Scanner kin = new Scanner(System.in);
-    int userInput = 3;
+    System.out.print("Input dimention: ");
+    int userInput = kin.nextInt();
     martixCalc n = new martixCalc(userInput);
     n.printMatrix_containder();
     for (int i = 0; i < userInput; i++) {
@@ -17,5 +18,6 @@ public class Mains {
       }
     }
     n.printMatrix_containder();
+    n.Calc2DMatrixDet();
   }
 }
